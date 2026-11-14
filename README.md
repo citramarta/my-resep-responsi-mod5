@@ -19,34 +19,6 @@ Aplikasi web untuk menyimpan dan mencari resep masakan. Dibuat untuk tugas prakt
 
 React 18, Vite, axios, dan vite-plugin-pwa. Data resep disimpan di localStorage, jadi aplikasi jalan tanpa server. Supabase bisa dipasang kalau mau sinkronisasi (opsional).
 
-## Menjalankan di laptop
-
-```bash
-npm install
-npm run dev
-```
-
-Lalu buka alamat yang muncul di terminal (biasanya http://localhost:5173).
-
-Service worker tidak aktif di mode `dev`. Untuk mencoba fitur PWA dan offline:
-
-```bash
-npm run build
-npm run preview
-```
-
-## Pakai Supabase 
-
-1. Buat project di Supabase, lalu jalankan isi `supabase.sql` di SQL Editor.
-2. Salin `.env.example` menjadi `.env`, isi dengan URL dan key project kamu.
-3. Kalau database dibuat dari versi lama, tambahkan kolom foto:
-
-```sql
-alter table public.recipes add column if not exists image text;
-```
-
-Tanpa langkah ini aplikasi tetap jalan, datanya hanya tersimpan di browser.
-
 ## Struktur folder
 
 ```text
